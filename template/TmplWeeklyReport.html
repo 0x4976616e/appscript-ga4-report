@@ -1,0 +1,26 @@
+<table style="border-collapse: collapse;" border="1" >
+  <tr>
+    <th><strong>Rank</strong></th>
+    <? for (var h = 0; h < header.length; h++) { ?>
+      <th><strong><?= header[h] ?></strong></th>
+    <? } ?>
+  </tr>  
+
+  <? for (var i = 0; i < data.length; i++) { ?>
+  <tr>
+    <td><center><?= i+1 ?></center></td>
+    <? for (var j = 0; j < data[i].length; j++) { ?>
+      <td><?=  data[i][j] ?></td>
+    <? } ?>
+  </tr>
+  <? } ?>
+
+  <? if (totals) { ?>
+  <tr>
+    <td></td>
+    <? for (var t = 0; t < totals.length; t++) { ?>
+      <td><strong><?= totals[t] ?></strong></td>
+    <? } ?>
+  </tr>
+  <? } ?>
+</table>
